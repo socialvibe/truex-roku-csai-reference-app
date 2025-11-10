@@ -128,7 +128,7 @@ sub onContentVideoPositionChange()
 
   ' check if is it a time to show a midroll
   for each adPod in m.adPods.midrolls
-    if m.videoPlayer.position >= adPod.rendertime and not(adPod.viewed) then
+    if m.videoPlayer.position >= adPod.renderTime and not(adPod.viewed) then
       ' stop the content playback and save position
       stopContentPlayback()
       ' start adpod playback

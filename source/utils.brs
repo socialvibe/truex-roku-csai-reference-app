@@ -147,7 +147,7 @@ function _asInteger(value_ as Dynamic, fallback_ = 0) as Integer
   end if
 
   if _isString(value_) then
-    return Val(value_, 0)
+    return value_.ToInt()
   end if
 
   if _isNumeric(value_) then
