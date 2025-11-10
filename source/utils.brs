@@ -186,8 +186,10 @@ end function
 function _Math_Ceil(value_) as Integer
   if Int(value_) = value_ then
     result_ = value_
-  else
+  else if value_ > 0 then
     result_ = Int(value_) + 1
+  else
+    result_ = Int(value_)
   end if
 
   return result_

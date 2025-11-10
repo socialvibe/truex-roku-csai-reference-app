@@ -21,7 +21,8 @@ sub init()
   m.currentAd = invalid
   m.currentAdIndex = invalid
 
-  ' truex related variables@see #onTruexEvent
+  ' truex related variables
+  ' @see #onTruexEvent
   m.truexUnrecoverableError = false
   m.truexSkipRemainingAds = false
 
@@ -337,10 +338,6 @@ end sub
 '   - viewed: boolean flag indicating if the pod has been viewed
 sub startAdPodPlayback(adPod as Object)
   ? "Ref App >>> PlaybackScreen # startAdPodPlayback() -- adPod: ";adPod.renderSequence;", ads: ";adPod.ads.Count()
-
-  if m.currentAdPod <> invalid then
-    stop
-  end if
 
   ' save as current
   m.currentAdPod = adPod
