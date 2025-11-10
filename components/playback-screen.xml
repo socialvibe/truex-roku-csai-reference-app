@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2026 TrueX, Inc. All rights reserved. -->
+
+<!--
+  PlaybackScreen
+
+  UX which contains the video player that is used to play the media stream.
+-->
+<component name="PlaybackScreen" extends="Group"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+  <interface>
+    <field id="event" type="assocarray" />
+
+    <function name="setup" />
+    <function name="dispose" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/playback-screen.brs" />
+  <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+
+  <children>
+    <Group id="contentFlowLayout">
+      <Video id="videoPlayer" notificationInterval="0.1" />
+    </Group>
+  </children>
+</component>
