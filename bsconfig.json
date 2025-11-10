@@ -1,0 +1,10 @@
+{
+  "stagingDir": ".staging",
+  "files": [
+    "manifest",
+    "components/**/*",
+    "source/**/*",
+    "res/**/*",
+    "fonts/**/*"
+  ]
+}

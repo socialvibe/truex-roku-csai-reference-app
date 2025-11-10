@@ -1,0 +1,14 @@
+{
+  "examples": [
+    {
+      "id": "truex-roku-csai-example-1",
+      "title": "TrueX Example App for CSAI",
+      "description": "This application demonstrates how TrueX and IDVx may be integrated within a channel that has CSAI and not using RAF. The payload.json file simulates what the host's CMS would return for the stream, including ad information. The app then creates TrueX and skips the rest of the ads if the user successfully completes the experience.",
+      "cover": "https://stash.truex.com/reference-apps/scratch/truex_cover_placeholder_spaceneedle.png",
+      "preview": "https://media.truex.com/video_assets/2017-03-06/a9fbc895-6987-440e-b940-eeef8a714338_large.mp4",
+      "url": "http://ctv.truex.com/assets/reference-app-stream-no-ads-720p.mp4",
+      "ad_url": "pkg:/res/sample-ads-response-vmap.xml",
+      "ad_url__comment__": "check source/main.brs - ad pods will be loaded using RAF stored under .adPods"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+  <vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
+    <vmap:AdSource id="preroll-ads" allowMultipleAds="true" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd"
+            version="3.0">
+          <!-- This is the trueX value exchange ad, <AdSystem> MUST be trueX, it must always be in position 1 -->
+          <Ad id="preroll-truex-ad" sequence="1">
+            <Wrapper>
+              <AdSystem>trueX</AdSystem>
+              <VASTAdTagURI>
+                <![CDATA[ https://get.truex.com/74fca63c733f098340b0a70489035d683024440d/vast/generic?env[]=brightscript&dimension_2=0&network_user_id=ROKU_ADS_TRACKING_ID&stream_position=midroll&stream_id=ROKU_ADS_CACHE_BUSTER&user_agent=ROKU_ADS_USER_AGENT ]]>
+              </VASTAdTagURI>
+            </Wrapper>
+          </Ad>
+          <!-- #1 - sample coffee ad -->
+          <Ad id="preroll-sample-coffee-ad" sequence="2">
+            <InLine>
+              <AdSystem>GDFP</AdSystem>
+              <AdTitle>Sample Coffee Video Ad</AdTitle>
+              <Impression></Impression>
+              <Description></Description>
+              <Creatives>
+                <Creative id="sample-coffee-ad-creative">
+                  <Linear>
+                    <Duration>00:00:30</Duration>
+                    <MediaFiles>
+                      <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
+                        <![CDATA[ https://ctv.truex.com/assets/coffee-720p.mp4 ]]>
+                      </MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+            </InLine>
+          </Ad>
+          <!-- #2 - This is the IDVx ad, <AdSystem> MUST be IDVx, the ad can appear anywhere in the sequence -->
+          <Ad id="preroll-idvx-ad" sequence="3">
+            <Wrapper>
+              <AdSystem>IDVx</AdSystem>
+              <VASTAdTagURI><![CDATA[ https://qa-rtb-tf.truex.com/5fe9984195f35a73282056385fc0308e69ff7860/vast/idvx/generic?env[]=brightscript&env[]=layoutJSON&network_user_id=ROKU_ADS_TRACKING_ID&user_agent=ROKU_ADS_USER_AGENT&cb=ROKU_ADS_CACHE_BUSTER ]]></VASTAdTagURI>
+              <!--
+                <VASTAdTagURI><![CDATA[ https://get.truex.com/b479b5ca6775c663ba308e6b6b000c2b4efd3426/vast/idvx/companion?env[]=brightscript&env[]=layoutJSON&stream_position=midroll&stream_id=ROKU_ADS_CACHE_BUSTER&network_user_id=ROKU_ADS_TRACKING_ID&user_agent=ROKU_ADS_USER_AGENT ]]></VASTAdTagURI>
+                -->
+            </Wrapper>
+          </Ad>
+          <!-- #3 - sample petcare ad-->
+          <Ad id="preroll-sample-petcare-ad" sequence="4">
+            <InLine>
+              <AdSystem>GDFP</AdSystem>
+              <AdTitle>Sample Petcare Video Ad</AdTitle>
+              <Impression></Impression>
+              <Description></Description>
+              <Creatives>
+                <Creative id="sample-petcare-ad-creative" sequence="3">
+                  <Linear>
+                    <Duration>00:00:32</Duration>
+                    <MediaFiles>
+                      <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
+                        <![CDATA[ https://ctv.truex.com/assets/petcare-720p.mp4 ]]>
+                      </MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:08:05.000" breakType="linear" breakId="midroll-1">
+    <vmap:AdSource id="midroll-1-ads" allowMultipleAds="true" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd"
+            version="3.0">
+          <!-- This is the trueX value exchange ad, <AdSystem> MUST be trueX, it must always be in position 1 -->
+          <Ad id="midroll-1-truex-ad" sequence="1">
+            <Wrapper>
+              <AdSystem>trueX</AdSystem>
+              <VASTAdTagURI>
+                <![CDATA[ https://get.truex.com/74fca63c733f098340b0a70489035d683024440d/vast/generic?env[]=brightscript&env[]=layoutJSON&dimension_2=0&network_user_id=ROKU_ADS_TRACKING_ID&stream_position=midroll&stream_id=ROKU_ADS_CACHE_BUSTER&user_agent=ROKU_ADS_USER_AGENT ]]>
+              </VASTAdTagURI>
+            </Wrapper>
+          </Ad>
+          <!-- #1 - sample coffee ad -->
+          <Ad id="midroll-1-sample-airline-ad" sequence="2">
+            <InLine>
+              <AdSystem>GDFP</AdSystem>
+              <AdTitle>Sample Coffee Video Ad</AdTitle>
+              <Impression></Impression>
+              <Description></Description>
+              <Creatives>
+                <Creative id="sample-coffee-ad">
+                  <Linear>
+                    <Duration>00:00:30</Duration>
+                    <MediaFiles>
+                      <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
+                        <![CDATA[ https://ctv.truex.com/assets/coffee-720p.mp4 ]]>
+                      </MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+            </InLine>
+          </Ad>
+          <!-- #2 - sample airline ad-->
+          <Ad id="midroll-1-sample-airline-ad" sequence="3">
+            <InLine>
+              <AdSystem>GDFP</AdSystem>
+              <AdTitle>Sample Airline Video Ad</AdTitle>
+              <Impression></Impression>
+              <Description></Description>
+              <Creatives>
+                <Creative id="sample-airline-ad-creative">
+                  <Linear>
+                    <Duration>00:00:30</Duration>
+                    <MediaFiles>
+                      <MediaFile delivery="progressive" width="1280" height="720" type="video/mp4" scalable="true" maintainAspectRatio="true">
+                        <![CDATA[ https://ctv.truex.com/assets/airline-720p.mp4 ]]>
+                      </MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+            </InLine>
+          </Ad>
+          <!-- #3 - This is the IDVx ad, <AdSystem> MUST be IDVx, the ad can appear anywhere in the sequence -->
+          <Ad id="midroll-1-idvx-ad" sequence="4">
+            <Wrapper>
+              <AdSystem>IDVx</AdSystem>
+              <VASTAdTagURI><![CDATA[ https://qa-rtb-tf.truex.com/5fe9984195f35a73282056385fc0308e69ff7860/vast/idvx/generic?env[]=brightscript&env[]=layoutJSON&network_user_id=ROKU_ADS_TRACKING_ID&user_agent=ROKU_ADS_USER_AGENT&cb=ROKU_ADS_CACHE_BUSTER ]]></VASTAdTagURI>
+              <!--
+                <VASTAdTagURI><![CDATA[ https://get.truex.com/b479b5ca6775c663ba308e6b6b000c2b4efd3426/vast/idvx/companion?env[]=brightscript&env[]=layoutJSON&stream_position=midroll&stream_id=ROKU_ADS_CACHE_BUSTER&network_user_id=ROKU_ADS_TRACKING_ID&user_agent=ROKU_ADS_USER_AGENT ]]></VASTAdTagURI>
+                -->
+            </Wrapper>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+  </vmap:AdBreak>
+</vmap:VMAP>

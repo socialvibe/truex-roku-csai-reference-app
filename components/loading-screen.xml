@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Copyright (c) 2019 true[X], Inc. All rights reserved. -->
+<!-- Copyright (c) 2026 TrueX, Inc. All rights reserved. -->
 
 <!--
-    LoadingFlow
+  LoadingScreen
 
-    Simple view shown to user when MainScene is loading assets. Contains an indeterminate progress indicator (spinner)
-    as well as a short message indicating that the app will proceed after load.
+  Simple view shown to user when MainScene is loading assets. Contains an indeterminate progress indicator (spinner)
+  as well as a short message indicating that the app will proceed after load.
 -->
-<component
-    name="LoadingFlow"
-    extends="BaseFlow">
+<component name="LoadingScreen" extends="Group"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
 
     <script
         type="text/brightscript"
-        uri="pkg:/components/LoadingFlow.brs"/>
+        uri="pkg:/components/loading-screen.brs"/>
 
     <interface>
+        <field id="events" type="assocarray" />
         <field id="spinnerImageUri" type="string" value="pkg:/images/spinner.png"/>
     </interface>
 
