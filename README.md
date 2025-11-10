@@ -215,10 +215,10 @@ m.tar.action = {
   type: "init",
   adParameters: adParameters,
   slotType: UCase(adSlotType),       ' "PREROLL" or "MIDROLL"
-  ` supportsUserCancelStream: false, ' [optional] set to true to enable the userCancelStream event
-  ` logLevel: 5,                     ' [optional] set the logging verbosity, from 0 (mute) to 5 (verbose)
-  ` channelWidth: 1920,              ' [optional] set the width in pixels of the channel
-  ` channelHeight: 1080              ' [optional] set the height in pixels of the channel
+  ' supportsUserCancelStream: false, ' [optional] set to true to enable the userCancelStream event
+  ' logLevel: 5,                     ' [optional] set the logging verbosity, from 0 (mute) to 5 (verbose)
+  ' channelWidth: 1920,              ' [optional] set the width in pixels of the channel
+  ' channelHeight: 1080              ' [optional] set the height in pixels of the channel
 }
 
 ' start the ad experience

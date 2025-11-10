@@ -36,13 +36,14 @@ end sub
 sub setGlobalField(fieldName as String, fieldValue as Dynamic)
   ' ? "Ref App >>> Utils::setGlobalField(fieldName=";fieldName;", fieldValue=";fieldValue;")"
 
-  if not m.global.hasField(fieldName) then
+  if not m.global.HasField(fieldName) then
     ? "Ref App >>> Utils::setGlobalField() - adding ";fieldName;" to m.global..."
     newField = {}
     newField[fieldName] = fieldValue
-    m.global.addFields(newField)
+    m.global.AddFields(newField)
   else
     ? "Ref App >>> Utils::setGlobalField() - updating existing field (";fieldName;") in m.global..."
+    m.global.SetField(fieldName, fieldValue)
   end if
 end sub
 

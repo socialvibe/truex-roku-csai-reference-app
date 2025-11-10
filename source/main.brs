@@ -53,7 +53,7 @@ function resolvePayload() as Object
         end if
       end for
 
-      ? "Ref App >>> resolvePaylod() -- title: '";example.title;"', adPods: ";example.adPods?.Count();", uri: ";example.ad_url
+      ? "Ref App >>> resolvePayload() -- title: '";example.title;"', adPods: ";example.adPods?.Count();", uri: ";example.ad_url
     end if
   end for
 
@@ -68,7 +68,7 @@ sub eventLoop()
     msgType = Type(msg)
     ? "Ref App >>> eventLoop() -- message received, type=";msgType
 
-    if msgType <> "roSGScreenEvent" and msg.IsScreenClosed() then return
+    if msgType = "roSGScreenEvent" and msg.IsScreenClosed() then return
   end while
 
   ? "Ref App >>> eventLoop() -- ended"

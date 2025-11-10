@@ -35,7 +35,7 @@
               </Creatives>
             </InLine>
           </Ad>
-          <!-- #2 - This is the IDVx ad, <AdSystem> MUST be IDVx, the ad can apprear anywhere in the sequence -->
+          <!-- #2 - This is the IDVx ad, <AdSystem> MUST be IDVx, the ad can appear anywhere in the sequence -->
           <Ad id="preroll-idvx-ad" sequence="3">
             <Wrapper>
               <AdSystem>IDVx</AdSystem>
@@ -126,11 +126,14 @@
               </Creatives>
             </InLine>
           </Ad>
-          <!-- #3 - This is the IDVx ad, <AdSystem> MUST be IDVx, the ad can apprear anywhere in the sequence -->
+          <!-- #3 - This is the IDVx ad, <AdSystem> MUST be IDVx, the ad can appear anywhere in the sequence -->
           <Ad id="midroll-1-idvx-ad" sequence="4">
             <Wrapper>
               <AdSystem>IDVx</AdSystem>
-              <VASTAdTagURI><![CDATA[ https://get.truex.com/b479b5ca6775c663ba308e6b6b000c2b4efd3426/vast/idvx/generic?env[]=brightscript&stream_position=midroll&stream_id=ROKU_ADS_CACHE_BUSTER&network_user_id=ROKU_ADS_TRACKING_ID&user_agent=ROKU_ADS_USER_AGENT ]]></VASTAdTagURI>
+              <VASTAdTagURI><![CDATA[ https://qa-rtb-tf.truex.com/5fe9984195f35a73282056385fc0308e69ff7860/vast/idvx/generic?env[]=brightscript&env[]=layoutJSON&network_user_id=ROKU_ADS_TRACKING_ID&user_agent=ROKU_ADS_USER_AGENT&cb=ROKU_ADS_CACHE_BUSTER ]]></VASTAdTagURI>
+              <!--
+                <VASTAdTagURI><![CDATA[ https://get.truex.com/b479b5ca6775c663ba308e6b6b000c2b4efd3426/vast/idvx/companion?env[]=brightscript&env[]=layoutJSON&stream_position=midroll&stream_id=ROKU_ADS_CACHE_BUSTER&network_user_id=ROKU_ADS_TRACKING_ID&user_agent=ROKU_ADS_USER_AGENT ]]></VASTAdTagURI>
+                -->
             </Wrapper>
           </Ad>
         </VAST>
