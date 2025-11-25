@@ -10,46 +10,46 @@
 '---------------------------------------------------------------------------------------------------------
 
 sub init()
-    ? "Ref App >>> LoadingFlow # init()"
+  ? "Ref App >>> LoadingFlow # init()"
 
-    ' immediately begin loading the spinner image
-    m.spinner = m.top.FindNode("busySpinner")
-    m.spinner.poster.uri = m.top.spinnerImageUri
-    m.spinner.poster.ObserveField("loadStatus", "onSpinnerLoadStatusChanged")
+  ' immediately begin loading the spinner image
+  m.spinner = m.top.FindNode("busySpinner")
+  m.spinner.poster.uri = m.top.spinnerImageUri
+  m.spinner.poster.ObserveField("loadStatus", "onSpinnerLoadStatusChanged")
 end sub
 
 '---------------------------------------------------------------------------------
 ' Checks m.spinner's 'loadStatus', updating UI element positions once it's ready.
 '---------------------------------------------------------------------------------
 sub onSpinnerLoadStatusChanged()
-    ? "Ref App >>> LoadingFlow # onSpinnerLoadStatusChanged(loadStatus: ";m.spinner.poster.loadStatus;")"
+  ? "Ref App >>> LoadingFlow # onSpinnerLoadStatusChanged(loadStatus: ";m.spinner.poster.loadStatus;")"
 
-    if m.spinner.poster.loadStatus = "ready" or m.spinner.poster.loadStatus = "failed" then
-        centerLayout()
-    end if
+  if m.spinner.poster.loadStatus = "ready" or m.spinner.poster.loadStatus = "failed" then
+    centerLayout()
+  end if
 end sub
 
 '--------------------------------------------------------------------------------
 ' Positions UI text elements in the middle of the screen, below the BusySpinner.
 '--------------------------------------------------------------------------------
 sub centerLayout()
-    ? "Ref App >>> LoadingFlow # centerLayout()"
+  ? "Ref App >>> LoadingFlow # centerLayout()"
 
-    ' calculate center position for busy spinner based on the Channel resolution
-    ' the bitmap's origin is (0, 0), in order to center it correctly we need to account for its width/height
-    ' center = (channelWidth|Height / 2) - (bitmapWidth|Height / 2) = (channelWidth|Height - bitmapWidth|Height) / 2
-    centerX = (m.global.channelWidth - m.spinner.poster.bitmapWidth) / 2
-    centerY = (m.global.channelHeight - m.spinner.poster.bitmapHeight) / 2
-    m.spinner.translation = [ centerX, centerY ]
-    m.spinner.visible = true
+  ' calculate center position for busy spinner based on the Channel resolution
+  ' the bitmap's origin is (0, 0), in order to center it correctly we need to account for its width/height
+  ' center = (channelWidth|Height / 2) - (bitmapWidth|Height / 2) = (channelWidth|Height - bitmapWidth|Height) / 2
+  centerX = (m.global.channelWidth - m.spinner.poster.bitmapWidth) / 2
+  centerY = (m.global.channelHeight - m.spinner.poster.bitmapHeight) / 2
+  m.spinner.translation = [ centerX, centerY ]
+  m.spinner.visible = true
 
-    pleaseWaitLabel = m.top.FindNode("pleaseWait")
-    pleaseWaitLabel.width = m.global.channelWidth
-    pleaseWaitLabel.height = m.global.channelHeight
-    pleaseWaitLabel.translation = [0, (m.spinner.poster.bitmapHeight / 2) + 62]
+  pleaseWaitLabel = m.top.FindNode("pleaseWait")
+  pleaseWaitLabel.width = m.global.channelWidth
+  pleaseWaitLabel.height = m.global.channelHeight
+  pleaseWaitLabel.translation = [0, (m.spinner.poster.bitmapHeight / 2) + 62]
 
-    loadingLabel = m.top.FindNode("loadingResources")
-    loadingLabel.width = m.global.channelWidth
-    loadingLabel.height = m.global.channelHeight
-    loadingLabel.translation = [0, (m.spinner.poster.bitmapHeight / 2) + 128]
+  loadingLabel = m.top.FindNode("loadingResources")
+  loadingLabel.width = m.global.channelWidth
+  loadingLabel.height = m.global.channelHeight
+  loadingLabel.translation = [0, (m.spinner.poster.bitmapHeight / 2) + 128]
 end sub

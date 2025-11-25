@@ -165,10 +165,10 @@ sub startTruexAd(truexAd as Object, truexAdIndex, adSlotType as String)
   ' TrueX utilizes 2 types of tags for Roku
   '
   ' #1 https://get.truex.com/:placement_hash/vast/generic?...
-  '    in this case adParameters will be defined as json string in VAST.Ad.InLine.Creatives.Creative.AdParameters
+  '    in this case `adParameters` will be defined as json string in VAST.Ad.InLine.Creatives.Creative.AdParameters
   '
   ' #2 https://get.truex.com/:placement_hash/vast/companion?...
-  '    in this case, adParameters will defined as base64 encoded json string in
+  '    in this case, `adParameters` will be defined as base64 encoded json string in
   '    VAST.Ad.InLine.Creatives.Creative.CompanionAds.Companion[apiFramework="truex"].StaticResource[creativeType="application/json"]
   adParametersJsonString = invalid
 
@@ -177,7 +177,7 @@ sub startTruexAd(truexAd as Object, truexAdIndex, adSlotType as String)
   else if _isArray(truexAd.companionAds) then         ' second, check companionAd.url - tag type #2
     ' this code shows how to handle the ad info result parsed by RAF
     ' in case the app utilizes a custom VAST/VMAP parsing, the code should check the field represents the data
-    ' from VAST.Ad.InLine.Creatives.Creative.CompanionAds.Companion[apiFramework="truex"].StaticResource[creativeType="application/json"]
+    ' from `VAST.Ad.InLine.Creatives.Creative.CompanionAds.Companion[apiFramework="truex"].StaticResource[creativeType="application/json"]`
     for each companionAd in truexAd.companionAds
       if LCase(companionAd.provider) = "truex" and _isNonEmptyString(companionAd.url) then
         adParametersBase64String = companionAd.url.Split("data:application/json;base64,")[1]

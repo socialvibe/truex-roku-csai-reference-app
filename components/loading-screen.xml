@@ -8,37 +8,32 @@
   as well as a short message indicating that the app will proceed after load.
 -->
 <component name="LoadingScreen" extends="Group"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
 
-    <script
-        type="text/brightscript"
-        uri="pkg:/components/loading-screen.brs"/>
+  <script type="text/brightscript" uri="pkg:/components/loading-screen.brs"/>
 
-    <interface>
-        <field id="events" type="assocarray" />
-        <field id="spinnerImageUri" type="string" value="pkg:/images/spinner.png"/>
-    </interface>
+  <interface>
+    <field id="events" type="assocarray" />
+    <field id="spinnerImageUri" type="string" value="pkg:/images/spinner.png"/>
+  </interface>
 
-    <children>
-        <!-- Loading indicator -->
-        <BusySpinner
-            id="busySpinner"
-            visible="false"
-            spinInterval="2"
-            control="start"/>
+  <children>
+    <!-- Loading indicator -->
+    <BusySpinner id="busySpinner"
+      visible="false"
+      spinInterval="2"
+      control="start"/>
 
-        <Label
-            id="pleaseWait"
-            horizAlign="center"
-            vertAlign="center"
-            text="Please Wait"/>
+    <Label id="pleaseWait"
+      horizAlign="center"
+      vertAlign="center"
+      text="Please Wait"/>
 
-        <Label
-            id="loadingResources"
-            horizAlign="center"
-            vertAlign="center"
-            text="Loading resources..."/>
-    </children>
+    <Label id="loadingResources"
+      horizAlign="center"
+      vertAlign="center"
+      text="Loading resources..."/>
+  </children>
 </component>
